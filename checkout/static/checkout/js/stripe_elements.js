@@ -1,8 +1,7 @@
 /*
     Core logic/payment flow for this comes from here:
     https://stripe.com/docs/payments/accept-a-payment
-
-    CSS from here:
+    CSS from here: 
     https://stripe.com/docs/stripe-js
 */
 
@@ -22,7 +21,7 @@ var style = {
     },
     invalid: {
         color: '#dc3545',
-        iconcolor: '#dc3545'
+        iconColor: '#dc3545'
     }
 };
 var card = elements.create('card', {style: style});
@@ -49,7 +48,7 @@ var form = document.getElementById('payment-form');
 
 form.addEventListener('submit', function(ev) {
     ev.preventDefault();
-    card.update({'disabled': true})
+    card.update({ 'disabled': true});
     $('#submit-button').attr('disabled', true);
     $('#payment-form').fadeToggle(100);
     $('#loading-overlay').fadeToggle(100);
